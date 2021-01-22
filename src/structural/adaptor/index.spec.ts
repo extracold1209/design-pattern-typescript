@@ -1,6 +1,6 @@
 import {Rectangle, SquareWrapper} from './index';
 
-test('Adaptor(Wrapper) Pattern', function () {
+test('Adapter(Wrapper) Pattern', function () {
     const rectangle = new Rectangle(10, 20);
 
     expect(rectangle.getWidth()).toEqual(10);
