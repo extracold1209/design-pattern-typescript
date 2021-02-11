@@ -1,12 +1,14 @@
 export default class Singleton {
     private static instance: Singleton;
-    public createdAt = Date.now();
+    public createdAt = Math.random();
 
     constructor() {
-        if (Singleton.instance) {
+        if (!Singleton.instance) {
+            Singleton.instance = this;
+            return this;
+        } else {
             return Singleton.instance;
         }
-        return this;
     }
 
     public static getInstance(): Singleton {
